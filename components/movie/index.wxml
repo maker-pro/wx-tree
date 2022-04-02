@@ -1,0 +1,9 @@
+<!--components/movie/index.wxml-->
+<view class="container" catch:tap="onGoToDetail">
+    <image class="poster" src="{{movie.images.large}}"></image>
+    <text class="title">{{movie.title}}</text>
+    <view class="rate-container">
+        <l-rate score="{{movie.rating.stars/10}}" size="24" disabled />
+        <text class="score">{{movie.rating.average}}</text>
+    </view>
+</view>
