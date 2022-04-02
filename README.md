@@ -3,19 +3,19 @@ rpx单位可以自适应所有机型的尺寸。
 在 iPhone6 机型下，看到的图片尺寸大小（比如：200*200），如果用px表示，则要除以2（100px*100px），如果用rpx表示则不变（200rpx*200rpx）。
 ## 2.	<view>标签，类似于html中的div来做页面布局，也可以用作容器。
 ## 3.	页面跳转函数 
-### 1，wx.navigateTo，跳转到一个子页面，可以返回到之前的页面，上一个页面的子页面（最多能跳转10次）。
+### 3.1，wx.navigateTo，跳转到一个子页面，可以返回到之前的页面，上一个页面的子页面（最多能跳转10次）。
 ```javascript
 wx.navigateTo({
   url: '/pages/posts/posts',
 })
 ```
-### 2，wx.redirectTo，不会保留父级页面
+### 3.2，wx.redirectTo，不会保留父级页面
 ```javascript
 wx.redirectTo({
   url: '/pages/posts/posts',
 })
 ```
-### 3，不同：wx.navigateTo 不会关闭当前页面（父页面），会保留页面栈中的。wx.redirectTo 会把当前页面（父页面）销毁
+### 3.3，不同：wx.navigateTo 不会关闭当前页面（父页面），会保留页面栈中的。wx.redirectTo 会把当前页面（父页面）销毁
 ## 4.	bind 和 catch， catch 与 bind 不同，catch 会阻止事件向上冒泡（catch 阻止事件冒泡，不再向父节点传递）。
 ## 5.	export 和 import ... from ...。导出
 ```javascript
